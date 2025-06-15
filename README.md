@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# 🥘 Receptová aplikácia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tento projekt je jednoduchá webová aplikácia na **zdieľanie receptov**.
 
-## Available Scripts
+Používateľ môže:
+- pridávať svoje recepty cez modálne okno
+- zobraziť si všetky pridané recepty
+- rozkliknúť si ich obsah
+- vymazať ich cez ikonku koša (s potvrdením)
+- recepty sa ukladajú do **MongoDB databázy**
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 💻 Použité technológie
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React (frontend)
+- Express.js + Node.js (backend)
+- MongoDB (databáza)
+- Axios (komunikácia frontend-backend)
+- FontAwesome (ikony)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ▶️ Ako projekt spustiť
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🔧 1. Naklonuj repozitár a priprav zložky
 
-### `npm run build`
+```
+git clone https://github.com/JakubFerencak/ReactPorject2N.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Projekt má dve časti:
+- `client/` – React frontend
+- `backend/` – Express backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🚀 2. Spustenie backendu (Express + MongoDB)
 
-### `npm run eject`
+#### 1️⃣ Prejdi do zložky `backend`:
+```
+cd backend
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 2️⃣ Nainštaluj potrebné balíčky (iba raz):
+```
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### 3️⃣ Spusti server:
+```
+node server.js
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+✅ Backend pobeží na `http://localhost:5000`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+#### 🛢️ MongoDB
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Projekt používa lokálnu MongoDB databázu:
+```
+mongodb://localhost:27017/recepty
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Ak máš nainštalovaný MongoDB Compass, môžeš sledovať a spravovať údaje vizuálne.
 
-### Code Splitting
+- Ak chceš používať `nodemon` pre automatický reštart servera:
+```
+npm install -g nodemon
+nodemon server.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+### 🌐 3. Spustenie frontendu (React)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### 1️⃣ Prejdi do zložky `client`:
+```
+cd ../client
+```
 
-### Making a Progressive Web App
+#### 2️⃣ Nainštaluj balíčky:
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### 3️⃣ Spusti React aplikáciu:
+```
+npm start
+```
 
-### Advanced Configuration
+➡️ Frontend beží na `http://localhost:3000` a automaticky sa otvorí v prehliadači.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📦 Stručný popis štruktúry
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+/client
+  /src
+    /Pages         <- Home, About, Recipes
+    /Components    <- Header, Footer
+    App.js
+    index.js
 
-### `npm run build` fails to minify
+/backend
+  models/Recipe.js
+  server.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+README.md
+```
+---
+
+- Aplikácia je rozdelená na frontend a backend.
+- Backend API poskytuje REST endpoints na ukladanie a mazanie receptov.
+- Všetky recepty sa trvalo ukladajú do databázy MongoDB.
+- Modalne okná, dizajn, animácie a rozhranie sú optimalizované pre základné použitie.
