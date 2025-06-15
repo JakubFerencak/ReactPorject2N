@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import './Recipes.css'; // Externé CSS
+import './Recipes.css'; 
 
 function Recipes() {
   const [recipes, setRecipes] = useState([]);

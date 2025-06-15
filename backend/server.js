@@ -5,11 +5,11 @@ const cors = require('cors');
 const app = express();
 const PORT = 5000;
 
-// Middleware
+
 app.use(cors());
 app.use(express.json());
 
-// MongoDB pripojenie
+
 mongoose.connect('mongodb://127.0.0.1:27017/recepty', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
