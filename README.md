@@ -116,3 +116,4 @@ README.md
 - Backend API poskytuje REST endpoints na ukladanie a mazanie receptov.
 - Všetky recepty sa trvalo ukladajú do databázy MongoDB.
 - Modalne okná, dizajn, animácie a rozhranie sú optimalizované pre základné použitie.
+- Po kliknutí na uložený recept budeme vidieť detaily. Recept vieme zachovať alebo ho zmazať.
