@@ -5,11 +5,13 @@ import Footer from './Components/Footer.js';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Recipes from './Pages/Recipes.js';
+import EmojiCloud from './Components/Emoji.js';
 
 function App() {
   return (
     <Router>
-      <div>
+      <div class="app-container">
+        <EmojiCloud />
         <Header name="Pridavaj recepty" />
 
         <Routes>

@@ -17,7 +17,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/recepty', {
 .then(() => console.log("✅ MongoDB pripojené"))
 .catch(err => console.error("❌ Chyba pri pripojení", err));
 
-// Schéma a model
+
 const recipeSchema = new mongoose.Schema({
   name: String,
   title: String,
@@ -27,7 +27,7 @@ const recipeSchema = new mongoose.Schema({
 
 const Recipe = mongoose.model('Recipe', recipeSchema);
 
-// API endpointy
+
 app.get('/recipes', async (req, res) => {
   const recipes = await Recipe.find().sort({ date: -1 });
   res.json(recipes);
@@ -44,7 +44,7 @@ app.delete('/recipes/:id', async (req, res) => {
   res.json({ message: "Recept zmazaný" });
 });
 
-// Spustenie servera
+
 app.listen(PORT, () => {
-  console.log(`🚀 Server beží na http://localhost:${PORT}`);
+  console.log(`Server beží na http://localhost:${PORT}`);
 });

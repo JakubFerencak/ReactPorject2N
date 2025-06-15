@@ -1,0 +1,21 @@
+.custom-footer {
+  background-color: #ffffff;
+  color: #666;
+  font-size: 0.85rem;
+  padding: 1rem 2rem;
+  border-top: 1px solid #e0e0e0;
+  margin-top: auto;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.footer-line {
+  border-top: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}

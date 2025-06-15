@@ -1,0 +1,46 @@
+.emoji {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.2;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+
+.emoji-1 { top: 90px; left: 10px; }
+.emoji-2 { top: 120px; left: 85%; }
+.emoji-3 { top: 20vh; left: 92%; }
+.emoji-4 { top: 50vh; left: 80%; }
+.emoji-5 { top: 70vh; right: 30%; }
+.emoji-6 { top: 45vh; left: 10%; }
+.emoji-7 { top: 15vh; left: 30%; }
+.emoji-8 { top: 75vh; left: 15%; }
+.emoji-9 { top: 60vh; right: 5%; }
+.emoji-10 { top: 70vh; left: 20px; }
+.emoji-11 { top: 15vh; left: 70%; }
+.emoji-12 { top: 65vh; right: 8%; }
+.emoji-13 { top: 28vh; left: 50%; }
+.emoji-14 { top: 70vh; left: 5%; }
+.emoji-15 { top: 80px; right: 5%; }
+.emoji-16 { top: 70vh; left: 20%; }
+.emoji-17 { top: 55vh; left: 60%; }
+.emoji-18 { top: 30vh; right: 10%; }
+.emoji-19 { top: 60vh; right: 10%; }
+.emoji-20 { top: 35vh; left: 35%; }
+.emoji-21 { top: 10vh; right: 20%; }
+.emoji-22 { top: 65vh; left: 50%; }
+.emoji-23 { top: 55vh; right: 30%; }
+.emoji-24 { top: 40vh; left: 75%; }
+.emoji-25 { top: 50vh; right: 25%; }
+.emoji-26 { top: 25vh; left: 5%; }
+.emoji-27 { top: 40vh; left: 23%; }
+.emoji-28 { top: 30vh; right: 5%; }
+.emoji-29 { top: 45vh; left: 30%; }
+.emoji-30 { top: 90px; right: 45%; }
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}

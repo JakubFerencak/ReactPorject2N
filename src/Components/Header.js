@@ -1,42 +1,20 @@
-import React from "react";
-import {Link} from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css'; 
 
-function Header(props){
-    console.log(props);
-    return(
-        <header style={styles.header}>
-            <div>
-                <h1>Recepty</h1>
-                <h3>{props.name}</h3>
-              <nav>
-                <ul style={styles.navList}>
-                    <li>
-                        <Link to="/">Domov</Link>
-                        </li>
-                        <li>
-                        <Link to="/recipes">Vase recepty</Link>
-                        </li>
-                        <li>
-                         <Link to="/about">O aplikacii</Link>
-                        </li>
-                </ul>
-              </nav>
-            </div>
-        </header>
-    )
-}
-
-const styles={
-    header:{
-        background:'#70c466',
-        color:'white',
-        textAlign:'center',
-    },
-    navList:{
-        display:'flex',
-        justifyContent:'center',
-        gap: '2em',
-    }
+function Header() {
+  return (
+    <header className="header">
+      <div className="logo">🍲 Recepty</div>
+      <nav>
+        <ul className="nav-list">
+          <li><Link to="/">Domov</Link></li>
+          <li><Link to="/recipes">Vaše recepty</Link></li>
+          <li><Link to="/about">O nás</Link></li>
+        </ul>
+      </nav>
+    </header>
+  );
 }
 
 export default Header;

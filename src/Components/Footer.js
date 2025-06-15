@@ -1,21 +1,16 @@
 import React from 'react';
+import './Footer.css';
 
 function Footer() {
-    return(
-        <footer style={styles.footer}>
-            TODO React aplikacia,vsetky prava vyhradene
-            <br></br>
-            2025
-        </footer>
-    );
-}
-
-const styles={
-    footer:{
-        background:'#70c466',
-        color:'white',
-        textAlign:'center',
-    }
+  return (
+    <footer className="custom-footer">
+      <div className="footer-line" />
+      <div className="footer-inner">
+        <span className="footer-left">© 2025 Recepty App. Všetky práva vyhradené.</span>
+        <span className="footer-right">Slovensko</span>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;
